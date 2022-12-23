@@ -8,7 +8,7 @@ class SearchBar extends HTMLElement {
     this.render();
   }
 
-  getValue(){
+  get value(){
     return this.querySelector('#searchElement').value;
   }
 
@@ -17,12 +17,11 @@ class SearchBar extends HTMLElement {
       <div id="search-container" class="search-container">
         <input placeholder="Search football club" id="searchElement" type="search">
         <button id="searchButtonElement" type="submit">Search</button>
-      <div>
+      </div>
     `;
 
     this.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent);
   }
-
 }
 
 customElements.define('search-bar', SearchBar);
